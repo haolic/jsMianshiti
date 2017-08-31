@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+</body>
+<script>
+	function c(){
+		console.log(a);//第一阶段把a赋值成undefined,第二阶段在a赋值成1之前控制台输出，所以输出undefined；
+		console.log(hello());
+		var a = 1;
+		function hello(){
+			return 2;
+		}
+	}
+	c();
+</script>
+</html>

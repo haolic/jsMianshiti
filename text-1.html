@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>text-1</title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+		function test(){
+			var x=10;
+			function a(){//函数a是test()的私有（内部）函数。在test()作用域外调用会报错。
+				alert(x);
+			}
+			a();
+		}
+		test();
+		alert(x);
+	</script>
+</head>
+<body>
+
+</body>
+</html>

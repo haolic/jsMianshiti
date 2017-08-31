@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>es5继承</title>
+	<script>
+		function Person(name, sex, age){
+			this.name = name;
+			this.age = age;
+			this.sex = sex;
+		}
+		Person.prototype.work = function(){
+			alert('用脚走');
+		}
+		function Student(num, sdept, name, sex, age){
+			Person.call(this, name, sex, age);
+			this.num = num;
+			this.sdept = sdept;
+		}
+		for (var i in Person.prototype){
+			Student.prototype[i] = Person.prototype[i] 
+		}
+		var stu1 = new Student(1001, "计算机", 'tom', '男', 19);
+		var stu2 = new Student(1002, '计算机', 'jarry', '女', 20);
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

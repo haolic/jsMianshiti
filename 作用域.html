@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+</body>
+<script>
+
+	(function(){
+		c = "hahaha";//没有用var定义,所以c是全局变量,函数内外都可访问.
+		var a = b = "hello aladdin";//b没有用var定义,所以是全局变量;
+	})();
+	console.log(b);
+	console.log(c);
+</script>
+</html>

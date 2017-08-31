@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+</body>
+<script>
+	function Car(name, color, price){
+		this.name = name;
+		this.color = color;
+		this.price = price;
+	}
+	Car.prototype.fw = function(){
+		console.log('前进');
+	}
+	Car.prototype.bk = function(){
+		console.log('后退');
+	}
+	Car.prototype.rn = function(){
+		console.log('拐弯');
+	}
+	var pst = new Car('帕萨特', '黑色', 20);
+</script>
+</html>

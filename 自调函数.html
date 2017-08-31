@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>自调函数</title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+		(function(){
+			window.onload=function(){
+				var p1=document.getElementById("p1");
+				p1.onclick=function(){
+					alert("触发了click事件。在回调函数中。")
+				}
+			}
+		})();
+	</script>
+	<style type="text/css">
+		p{
+			text-decoration:underline;
+		}
+	</style>
+</head>
+<body>
+<p id="p1">点击触发自调函数。</p>
+</body>
+</html>
