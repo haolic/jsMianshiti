@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        let arr = [1,[2,3,[4,5,6],2,3],8,9];
+        let newArr = [];
+        let changeArr = (arr) => {
+            for (value of arr) {
+                if (Array.isArray(value)) {
+                    changeArr(value);
+                } else {
+                    newArr.push(value);
+                }
+            }
+            return newArr;
+        }
+        console.log(changeArr(arr));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
