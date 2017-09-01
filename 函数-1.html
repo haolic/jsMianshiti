@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        var a = 6;
+        setTimeout(function(){
+            var a = 10;
+            alert(this.a);
+            alert(this);
+        },1000);
+        a = 66;
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

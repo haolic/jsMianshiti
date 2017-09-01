@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>动态radio选中</title>
+	<script src="node_modules/jquery/dist/jquery.min.js"></script>
+</head>
+<body>
+	<input type="radio" name="hello">
+	<button>点击测试</button>
+	<script>
+	$("button").click(function(){
+		$("input").attr('checked',true);
+	})
+	</script>
+</body>
+</html>
