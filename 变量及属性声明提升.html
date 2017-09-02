@@ -10,11 +10,13 @@
 	<div></div>
 </body>
 <script>
-	let obj = {};
-	let test = () => {
-		obj.a = 'Action';
+	alert("a" in window);
+	if(!("a" in window)) {
+		alert(1);
+		function a() {
+			window.a = 1;
+		}
 	}
-	//此处函数test并没有执行.但是属性a已经被创建并赋值为undefined.声明提升机制.
-	console.log(obj.a);
+	alert(typeof window.a);
 </script>
 </html>
