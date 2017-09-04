@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>分割url</title>
+    <script>
+        let url = "http://localhost:8080/dcv_jupitor1?admin=123&password=123&port=3";
+        let oUrl = {};
+        let arr = url.split('?');
+        oUrl.url = arr[0];
+        oUrl.data = [];
+        let aData = arr[1].split('&');
+        aData.forEach((value, index) => {
+            let _data = {};
+            _data.name = value.split('=')[0];
+            _data.value = value.split('=')[1];
+            oUrl.data.push(_data);
+        })
+        console.log(oUrl);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
