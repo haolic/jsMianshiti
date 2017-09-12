@@ -4,15 +4,13 @@
 		<meta charset="UTF-8">
 		<title>测试</title>
 		<script>
-			var x,y,z;
-			x=8;
-			y=x++;
-			++x;
-			y=++x;
-			x++;
-			z=x+y++;
-			alert("x="+x+"\ny="+y+"\nz="+z);
-			alert("git测试");
+			function Foo(){
+				getName = function(){alert(1)};
+				Foo.getName = function(){alert(2)};
+				Foo.prototype.getName = function(){alert(3)};
+				var getName = function(){alert(4)};
+				function getName(){alert(5)};
+			}
 		</script>
 	</head>
 	<body>
