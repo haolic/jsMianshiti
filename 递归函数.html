@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		let i = 0;
+		function foo () {
+			console.log("调用了" + i + "次");
+			i ++;
+			if(i == 100) {
+				return;
+			}
+			setTimeout(foo, 10);
+		}
+		foo();
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

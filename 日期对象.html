@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script>
+    window.onload = function () {
+      var oDiv = document.getElementById('div1');
+      var time1 = function() {
+        var date1 = new Date();
+        var year1 = date1.getFullYear();
+        var date2 = new Date(year1, 12, 31, 12, 59, 59);
+        var str = (date2 - date1)/1000;
+        var day = Math.floor(str/(24*60*60));
+        var hour = Math.floor(str%(24*60*60)/(60*60));
+        var minutes = Math.floor(str%(24*60*60)%(60*60)/60);
+        var seconds = Math.floor(str%(24*60*60)%(60*60)%60);
+        var outStr = year1 + '年还剩: ' + day + "天" + hour + "小时" + minutes + "分钟" + seconds + "秒";
+        oDiv.innerHTML = outStr;
+      }
+      setInterval(time1, 1000);
+    }
+  </script>
+</head>
+<body>
+  <div id="div1"></div>
+</body>
+</html>
