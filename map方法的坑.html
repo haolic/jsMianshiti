@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		var arr = [1,2,3,]
+		console.log(arr);
+		console.log(arr[0]);
+		var newArr = arr.forEach(function (value) {//forEach没有返回值(返回undefined).
+			value += 1;
+			return value;
+		})//forEach关注的是对数组元素的处理,而不是返回值.
+
+		console.log(newArr);
+		console.log('-------------------------');
+
+
+
+		var arr1 = [1,2,3,];
+		console.log(arr1);
+		var newArr1 = arr1.map(value => value + 1);
+		console.log(arr1);
+		console.log(newArr1);
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

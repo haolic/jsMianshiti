@@ -3,16 +3,58 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>测试</title>
-		<script>
-			function Foo(){
-				getName = function(){alert(1)};
-				Foo.getName = function(){alert(2)};
-				Foo.prototype.getName = function(){alert(3)};
-				var getName = function(){alert(4)};
-				function getName(){alert(5)};
+		<style>
+			body,html{
+				height: 100%;
+				width: 100%;
+				margin: 0;
+				padding: 0;
 			}
+			#out{
+				background: #000;
+				height: 100%;
+				width: 100%;
+				display: none; 
+				position: fixed;
+				opacity: .3;
+				top: 0;
+			}
+			#tianjia{
+				display: none;
+				background: #fff;
+				width: 400px;
+				height: 250px;
+				margin: 0 auto;
+				position: fixed;
+				top: 300px;
+				left: 50%;
+				margin-left: -200px;
+				z-index: 2;
+			}
+		</style>
+		<script src="node_modules/jquery/dist/jquery.js"></script>
+		<script>
+			$(function () {
+				$('#btn').click(function () {
+					$('#out').show().prev().show();
+				});
+				$('#btn1').click(function () {
+					$('#out').hide().prev().hide();
+				})
+			})
 		</script>
 	</head>
 	<body>
+	<button id="btn">点击测试</button>
+	<div id="tianjia">
+		asdfasdf
+		asdf
+		asdf
+`			<button id="btn1">x</button>
+		asdf
+	</div>
+	<div id="out">
+		
+	</div>
 	</body>
 </html>

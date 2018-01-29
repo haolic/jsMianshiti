@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		window.onload = function () {
+			var i1 = document.getElementById('i1');
+			var i2 = document.getElementById('i2');
+			i1.oninput = function () {
+				
+				i2.value = i1.value;
+			};
+			i2.oninput = function () {
+				
+				i1.value = i2.value;
+			};
+		}
+	</script>
+</head>
+<body>
+	<input type="text" id="i1">
+	<input type="text" id="i2">
+</body>
+</html>
