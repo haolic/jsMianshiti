@@ -7,10 +7,11 @@
     <title>Document</title>
     <script>
         let obj = {Fetch: 150, aaa: 200, bbb: 300, ccc: 120};
-        let arr = [],
-        for (let key in obj) {
-            console.log(key);
+        let arr = [];
+        for(let key in obj) {
+            arr.push({value: obj[key], label: key});
         }
+        console.log(arr);
     </script>
 </head>
 <body>
