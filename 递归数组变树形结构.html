@@ -14,13 +14,11 @@
         let obj = {};
         let i = 0;
         let deal2Tree = function(obj) {
-            
             obj.label = arr[i];
             obj.children = [{label: arr[++i]}];
             if(i < arr.length-1) {
                 arguments.callee(obj.children[0]);
             }
-
         }
         deal2Tree(obj);
         console.log(obj)
